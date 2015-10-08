@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.ico.bluetoothexample" >
+
+    <!-- 커넥션 요구, 커넥션 수락, 데이터 전송 등의 블루투스 등의 블루투스 통신을 하기 위해 필요한 권한 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <!-- 디바이스 검색 시작, 블루투스 설정을 조작하기 위해 필요 -->
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".DeviceListActivity"
+            android:label="@string/title_activity_device_list" >
+        </activity>
+    </application>
+
+</manifest>
